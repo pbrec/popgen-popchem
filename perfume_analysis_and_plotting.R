@@ -2,7 +2,6 @@
 ##Title: "The evolution of sexual signaling is linked to odorant receptor tuning in perfume-collecting orchid bees"
 ##Based on the files peak_area_matrix_Brandetal.txt and pop_ids_gcms.txt.
 ##a full matrix with peak areas and retention times for individual bees is available in the same github folder 
-setwd("/Users/pbrand/science/research/phd/manuscripts/popgen-popchem/Second version 032519/natureComm/revision2/code")
 ##########
 ##########
 
@@ -241,8 +240,6 @@ require(vegan)
 require(ecodist)
 require(plyr)
 
-setwd("/Users/pbrand/science/research/phd/manuscripts/popgen-popchem/Second version 032519/natureComm/revision2/code")
-
 rm(list=ls())
 
 data <- read.table("peak_area_matrix_Brandetal.txt", header=T)
@@ -305,7 +302,3 @@ ano$dis.rank
 sim<-with(grouping, simper(drPP, virCombined))
 sim.sum<-summary(sim)
 head(sim.sum$"1_0",n=18) #1_0 specifies dilemma-viridissima comparison
-
-
-
-
